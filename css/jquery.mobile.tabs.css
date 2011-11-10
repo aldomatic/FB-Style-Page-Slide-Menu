@@ -1,0 +1,7 @@
+.ui-tabs-content {
+  display: none;
+  margin-top: -15px;
+}
+.ui-tabs-content-active {
+  display: block;
+}

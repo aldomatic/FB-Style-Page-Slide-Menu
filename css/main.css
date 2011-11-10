@@ -1,0 +1,236 @@
+body{
+	background:#5a5959 url(../images/menuBg.gif) top left repeat-y;
+	-webkit-text-size-adjust:none !important;
+}
+		.pages h3{
+			margin:0;
+			font-size:18px;
+			font-weight:normal;
+		}
+		.contentWrap{
+			width:310px;
+			margin: 0 auto;
+			padding:15px 5px 0 5px;
+		}
+		#menu{
+			width:165px;
+			height:100%;
+			display:block !important;
+			float:left;
+			}
+			#menu ul{
+				margin:0;padding:0;
+				width:inherit;
+				}
+				#menu ul li{
+					list-style-type:none;
+					margin:0px 0;
+					/*border-bottom:solid #6d6d6d 1px;*/
+					}
+					#menu ul li a:link, #menu ul li a:visited{
+						border-bottom:solid #333 1px;
+						color:#fff;
+						font-size:14px;
+						font-family:arial;
+						text-decoration:none;
+						width:165px;
+						display:block;
+						padding:10px 0px 10px 10px; 
+						text-shadow: 0px 1px 1px #000000;
+					}
+					#menu ul li a:hover, #menu ul li a:active{
+						background-color:#716f6f;
+					}
+					#menu ul li a:hover span.icon{
+						background-position:0 -40px !important;
+					}	
+					#menu li a span.icon{
+						float:right;
+						width:21px;
+						height:20px;
+						background: transparent url(../images/menuIconsSprite.png) 0 0 no-repeat;
+						position:relative;
+						right:20px;
+						top:-2px;
+					}
+					.ui-body-c{
+						background:#fff !important;
+					}
+					.ui-bar-a{
+						/*background:#3b5999 !important;*/
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(50%,rgba(41,137,216,1)), color-stop(51%,rgba(32,124,202,1)), color-stop(100%,rgba(125,185,232,1)));
+						border: none !important;
+						border-bottom:solid #878787 1px !important;
+						color:#fff !important;
+						text-shadow: 0px 1px 1px #000;
+					}
+					.active{
+						background-color:#383737;
+						background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,29,29,1)), color-stop(21%,rgba(56,55,55,1)));
+						}
+						li.active a span.icon{
+							background-position:0 -20px !important;
+						}	
+						
+						
+						#memberDetails{
+							font-size:14px;
+							font-family:arial;
+							padding:0 15px 5px 10px;
+							color:#fff;
+							text-shadow: 0px 1px 1px #000000;
+							width:110px;
+							}
+							#memberDetails h3{
+								font-weight:normal;
+								font-size:14px;
+							}
+							#memberDetails span{
+								color:#fff;
+							}
+							
+							
+							.ui-btn-up-a {
+								border:none !important;
+								background: transparent !important;
+								background-image: none !important;
+							}
+							a.menuBtn{
+								background: transparent url(../images/menuBtn.png) top left no-repeat !important;
+								width:31px;
+								height:31px;
+								background-size: 30px 30px;
+								text-indent:-999em !important;
+								display:block !important;
+								-webkit-box-shadow: 0 0px 0 rgba(150,150,150,.3) !important;
+								box-shadow: 0 0px 0 rgba(150,150,150,.3) !important;
+	
+							}
+							a.menuBtn .ui-btn-inner{
+								border:none;
+							}
+							a.menuBtn:hover{
+								border:none !important;
+							}
+							.ui-btn-corner-all {
+								-webkit-border-radius: 0 !important;
+								border-radius: 0 !important;
+								}
+								
+								
+							
+								
+/*
+	Tab Styles
+	
+*/
+ #transunionBubble, #equifaxBubble {
+    display: none;
+ }
+#creditScoreTabs{
+	background-color:#595758;
+	padding:10px 5px 0 5px;
+	border-top:solid #000 1px;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,29,29,1)), color-stop(21%,rgba(56,55,55,1)));
+}
+#creditScoreTabs .ui-btn-up-c{
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border:none;
+	
+}
+#creditScoreTabs .ui-btn-inner{
+	border-top:none;
+}
+#creditScoreTabs li{
+	width:92px;
+	margin-left:5px;
+}															
+#creditScoreTabs .ui-grid-b{
+	width:297px;
+	margin:0 auto -1px auto
+}
+#creditScoreTabs li .ui-btn-up-c{
+	background: #fff;
+}
+/*
+#creditScoreTabs li.on a{
+	background: #fff;
+}
+#creditScoreTabs li.off a{
+	background: #595758;
+	color:#fff;
+	text-shadow: 0px 1px 1px #000;
+	border-top:solid #807e7f 1px;
+}
+*/
+
+#creditScoreTabs li a.ui-btn-hover-c{
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border:none;
+	color:#fff;
+	background:#4e4d4e !important;
+}
+/*
+#creditScoreTabs li a.ui-btn-hover-c{
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border:none;
+	text-shadow:none;
+	color:#444;
+}
+*/
+
+
+/*
+#creditScoreTabs li.off a.ui-btn-hover-c{
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	border:none;
+	text-shadow:none;
+}
+*/
+
+
+
+
+
+#creditScoreTabs li a{
+	background-color: #595758 !important;
+	color:#fff;
+	text-shadow: 0px 1px 1px #000;
+	border-top:solid #807e7f 1px !important;
+	font-size:12px !important;
+	font-weight:normal !important;
+}
+
+
+
+
+#creditScoreTabs li a.ui-btn-active{
+	color:#444;
+	text-shadow:none;
+	border:none;
+	background-color: #fff !important;
+	border-top:solid #fff 1px !important;
+	text-shadow: 0px 1px 1px #fff;
+	background: -webkit-linear-gradient(top, rgba(242,242,242,1) 0%,rgba(255,255,255,1) 65%);
+}
+
+
+
+
+
+
+.bBubble{
+	width:268px;
+	margin:0 auto;
+	border-radius:10px;
+	background: -webkit-linear-gradient(top, rgba(255,255,255,1) 35%,rgba(237,237,237,1) 100%);
+	height:150px;
+	border:solid #eaeaea 1px;
+	padding:10px;
+	-webkit-box-shadow: 0px 1px 0px 0px rgba(150, 150, 150, 0.6);
+}
+
