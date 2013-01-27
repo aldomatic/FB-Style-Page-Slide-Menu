@@ -4,12 +4,11 @@ $(document).bind("mobileinit", function () {
  
 $(function () {
     var menuStatus;
-    var act = $(".ui-page-active");
     var show = function() {
         if(menuStatus) {
             return;
         }
-        act.animate({
+        $.mobile.activePage.animate({
             marginLeft: "165px",
         }, 300, function () {
             menuStatus = true
@@ -19,7 +18,7 @@ $(function () {
         if(!menuStatus) {
             return;
         }
-        act.animate({
+        $.mobile.activePage.animate({
             marginLeft: "0px",
         }, 300, function () {
             menuStatus = false
