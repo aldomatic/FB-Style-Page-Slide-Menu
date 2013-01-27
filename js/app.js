@@ -8,6 +8,7 @@ $(function () {
         if(menuStatus) {
             return;
         }
+        $('#menu').show();
         $.mobile.activePage.animate({
             marginLeft: "165px",
         }, 300, function () {
@@ -22,6 +23,7 @@ $(function () {
             marginLeft: "0px",
         }, 300, function () {
             menuStatus = false
+            $('#menu').hide();
         });
     };
     var toggle = function() {
