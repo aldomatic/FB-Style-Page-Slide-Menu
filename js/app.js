@@ -4,46 +4,41 @@ $(document).bind("mobileinit", function () {
  
 $(function () {
     var menuStatus;
- 
-    // Show menu
-    $("a.showMenu").click(function () {
-        if (menuStatus != true) {
-            $(".ui-page-active").animate({
-                marginLeft: "165px",
-            }, 300, function () {
-                menuStatus = true
-            });
-            return false;
-        } else {
-            $(".ui-page-active").animate({
-                marginLeft: "0px",
-            }, 300, function () {
-                menuStatus = false
-            });
-            return false;
+    var show = function() {
+        if(menuStatus) {
+            return;
         }
-    });
- 
- 
-    $('#menu, .pages').live("swipeleft", function () {
-        if (menuStatus) {
-            $(".ui-page-active").animate({
-                marginLeft: "0px",
-            }, 300, function () {
-                menuStatus = false
-            });
+        $('#menu').show();
+        $.mobile.activePage.animate({
+            marginLeft: "165px",
+        }, 300, function () {
+            menuStatus = true
+        });
+    };
+    var hide = function() {
+        if(!menuStatus) {
+            return;
         }
-    });
- 
-    $('.pages').live("swiperight", function () {
+        $.mobile.activePage.animate({
+            marginLeft: "0px",
+        }, 300, function () {
+            menuStatus = false
+            $('#menu').hide();
+        });
+    };
+    var toggle = function() {
         if (!menuStatus) {
-            $(".ui-page-active").animate({
-                marginLeft: "165px",
-            }, 300, function () {
-                menuStatus = true
-            });
+            show();
+        } else {
+            hide();
         }
-    });
+        return false;
+    };
+ 
+    // Show/hide the menu
+    $("a.showMenu").click(toggle);
+    $('#menu, .pages').live("swipeleft", hide);
+    $('.pages').live("swiperight", show);
  
     $('div[data-role="page"]').live('pagebeforeshow', function (event, ui) {
         menuStatus = false;
@@ -53,12 +48,8 @@ $(function () {
     // Menu behaviour
     $("#menu li a").click(function () {
         var p = $(this).parent();
-        if ($(p).hasClass('active')) {
-            $("#menu li").removeClass('active');
-        } else {
-            $("#menu li").removeClass('active');
-            $(p).addClass('active');
-        }
+        p.siblings().removeClass('active');
+        p.addClass('active');
     });
 });
  
